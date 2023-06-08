@@ -33,9 +33,6 @@ async function connectDb() {
   //     color: 'Red',
   //     breed: 'Dog',
   // });
-  const gasper = await Cat.findById("6481af0c7b4d0b97bd0321fd");
-  gasper.name = "Casper";
-  console.log(gasper.question);
 
   // Update method 1
   // const charli = await Cat.findOne({name: 'Charli'});
