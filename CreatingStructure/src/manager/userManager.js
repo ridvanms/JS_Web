@@ -2,7 +2,6 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("../lib/jwt");
 
-const SECRET = "lkij02lkj1asfkj01lkjcvmnnnaosdkj12399alfkkja";
 
 exports.login = async (username, password) => {
   // TODO find user by username

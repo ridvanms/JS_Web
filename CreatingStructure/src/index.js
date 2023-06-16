@@ -3,6 +3,7 @@ const handlebars = require("express-handlebars");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
+const { auth } = require("./middleware/authMiddleware");
 const routes = require("./routes");
 const path = require("path");
 
@@ -24,6 +25,7 @@ app.set("views", "src/views");
 app.use("/static", express.static(path.resolve(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(auth);
 app.use(routes);
 
 const PORT = 3000;
