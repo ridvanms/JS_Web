@@ -30,5 +30,5 @@ app.use(auth);
 app.use(routes);
 app.use(errorHandler);
 
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, console.log(`Server is listening on ${PORT}`));
