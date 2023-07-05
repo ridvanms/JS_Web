@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{HttpClientModule} from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TesterComponentComponent } from './tester-component/tester-component.component';
+import { UserServiceService } from './services/user-service.service';
+import { ApiRequestsService } from './services/api-requests.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TesterComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserServiceService,ApiRequestsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
