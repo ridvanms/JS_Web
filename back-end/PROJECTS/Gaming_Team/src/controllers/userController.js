@@ -12,8 +12,7 @@ router.post("/login", async (req, res) => {
     res.cookie(TOKEN_KEY, token);
     res.redirect("/");
   } catch (err) {
-    // res.render("user/login", { error: getErrorMessage() });
-    console.log("error: ", err.message);
+    res.render("users/login", { error: err.message }); 
   }
 });
 router.get("/register", (req, res) => {

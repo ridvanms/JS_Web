@@ -1,11 +1,19 @@
+const { auth, isAuth } = require("../middleware/authMiddleware");
 const router = require("express").Router();
 
-router.get("/create", (req, res) => {
+const { createGame } = require("../managers/gameManager");
+
+router.get("/create", isAuth, (req, res) => {
   res.render("games/create");
 });
-router.post("/create", (req, res) => {
-  const createData = req.body;
-  console.log(createData);
-  // res.redirect("/catalog");
+router.post("/create", isAuth, async (req, res) => {
+  const gameData = req.body;
+  try {
+    await createGame(gameData);
+
+    res.redirect("/catalog");
+  } catch (err) {
+    res.render("games/create", { error: err.message, gameData });
+  }
 });
 module.exports = router;
