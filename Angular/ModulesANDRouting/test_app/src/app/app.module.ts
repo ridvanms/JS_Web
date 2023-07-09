@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { AlbumModule } from './album/album.module';
+import { CommentsModule } from './comments/comments.module';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { AlbumModule } from './album/album.module';
     HttpClientModule,
     MatListModule,
     MatDividerModule,
-    AlbumModule
+    AlbumModule,
+    CommentsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

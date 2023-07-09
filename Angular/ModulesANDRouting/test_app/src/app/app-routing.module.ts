@@ -11,7 +11,11 @@ const routes: Routes = [
   {path:"",pathMatch:"full",component:HomeComponent},
   {path:"contacts",component:ContactsComponent},
   {path:"about",component:AboutComponent},
-  {path:"album",component:AlbumComponent}
+  {path:"album",component:AlbumComponent},
+  {
+    path:"comments",
+    loadChildren:() => import('./comments/comments.module').then(m => m.CommentsModule),
+  }
 ];
 
 @NgModule({
