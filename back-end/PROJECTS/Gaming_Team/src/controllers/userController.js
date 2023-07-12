@@ -12,7 +12,7 @@ router.post("/login", async (req, res) => {
     res.cookie(TOKEN_KEY, token);
     res.redirect("/");
   } catch (err) {
-    res.render("users/login", { error: err.message }); 
+    res.render("users/login", { error: err.message });
   }
 });
 router.get("/register", (req, res) => {
@@ -30,8 +30,7 @@ router.post("/register", async (req, res) => {
     res.cookie(TOKEN_KEY, token);
     res.redirect("/");
   } catch (err) {
-    // res.render('users/register',{error:getErrorMessage()})
-    console.log("err: ", err.message);
+    res.render("users/register", { error: err.message, userData: req.body });
   }
 });
 router.get("/logout", (req, res) => {

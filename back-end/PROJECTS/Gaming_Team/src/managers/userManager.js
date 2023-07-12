@@ -5,16 +5,16 @@ const { SECRET } = require("../config/config");
 
 exports.Login = async (email, password) => {
   const user = await User.findOne({ email });
-  
-    if (!user) {
-      throw new Error("Invalid user or password");
-    }
-    const isValid = await bcrypt.compare(password, user.password);
-    if (!isValid) {
-      throw new Error("Invalid user or password");
-    }
-    const token = await generateToken(user);
-    return token; 
+
+  if (!user) {
+    throw new Error("Invalid user or password");
+  }
+  const isValid = await bcrypt.compare(password, user.password);
+  if (!isValid) {
+    throw new Error("Invalid user or password");
+  }
+  const token = await generateToken(user);
+  return token;
 };
 exports.Register = async (userData) => {
   const user = await User.findOne({
@@ -23,6 +23,11 @@ exports.Register = async (userData) => {
   if (user) {
     throw new Error("Username already exists");
   }
+
+  // userData = username: '', email: '', password: '', confirmPassword: ''
+  const { username, email, password, confirmPassword } = userData;
+  if (!username || !email || !password || !confirmPassword)
+    throw new Error("All fields need to be fulfilled");
   const createUser = User.create(userData);
   const token = await generateToken(createUser);
   return token;
