@@ -1,0 +1,17 @@
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2em;
+}
+img{
+  width: 20em;
+  border-radius: 2em;
+  transition: 0.7s ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.736) 0px 0px 0px 3px;
+}
+img:hover{
+  transition: 0.7s ease-in-out;
+box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+
+}

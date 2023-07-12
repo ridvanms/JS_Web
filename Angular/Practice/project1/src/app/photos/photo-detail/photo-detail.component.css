@@ -1,0 +1,7 @@
+.container h1{
+    position: relative;
+}
+.container div{
+    display: flex;
+    justify-content: center;
+}

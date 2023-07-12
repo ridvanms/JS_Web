@@ -1,0 +1,12 @@
+<div *ngIf="isLoading">
+    <app-global-loader></app-global-loader>
+</div>
+<section class="navAndContent" *ngIf="!isLoading">
+    <div>
+        <app-navigation ></app-navigation>
+    </div>
+    <div class="container content">
+        
+        <router-outlet></router-outlet>
+    </div>
+</section>

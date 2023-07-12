@@ -1,0 +1,81 @@
+<div class="logInContainer">
+    <div [routerLink]="['/profile']" ><span>Profile's </span>Gosho</div>
+    <div routerLink="/users/login" >LogIn</div>
+    <div routerLink="/users/signup" >SignUp</div>
+</div>
+<div class="menu-container">
+
+    <input type="checkbox" id="openmenu" class="hamburger-checkbox">
+    <!-- ! -->
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        Button with data-bs-target
+    </button>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+                etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ! -->
+    <div class="hamburger-icon">
+        <label for="openmenu" id="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="menu-pane">
+
+        <nav>
+            <ul class="menu-links">
+                <li><a routerLink="/">HOME</a><span id="QC-info">
+                       
+                    </span>
+
+                </li>
+
+                <li><a routerLink="/about">About</a>
+
+                </li>
+                <li><a routerLink="/contacts">Contacts</a></li>
+            </ul>
+            <ul class="menu-links">
+                <li><a routerLink="/users">Users</a>
+                    <span id="DC-info">
+                    </span>
+                </li>
+
+                <li><a routerLink="/comments">Comments</a></li>
+                <li><a routerLink="/photos">Photos</a></li>
+            </ul>
+
+
+        </nav>
+    </div>
+    
+</div>
