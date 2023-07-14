@@ -15,15 +15,16 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { AlbumModule } from './album/album.module';
 import { CommentsModule } from './comments/comments.module';
-
+import { AboutHighlightDirective } from './about/about-highlight.directive';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     HomeComponent,
-    AboutComponent
-    
+    AboutComponent,
+    AboutHighlightDirective,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,7 @@ import { CommentsModule } from './comments/comments.module';
     MatDividerModule,
     AlbumModule,
     CommentsModule,
-
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
