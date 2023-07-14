@@ -1,0 +1,20 @@
+<div class="login-box">
+    <h2>Login</h2>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="user-box form-group">
+            <input type="text" name="email" [(ngModel)]="formData.email" email required>
+            <label>Email</label>
+        </div>
+        <div class="user-box form-group">
+            <input type="password" name="password" [(ngModel)]="formData.password" required>
+            <label>Password</label>
+        </div>
+        <a type="submit" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button type="submit">Login</button>
+        </a>
+    </form>
+</div>
