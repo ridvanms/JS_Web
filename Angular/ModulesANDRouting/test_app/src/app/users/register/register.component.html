@@ -1,25 +1,33 @@
 <div class="register-box">
     <h2>Register</h2>
-    <form>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         
         <div class="user-box">
-            <input type="text" name="email" email required>
+            <input type="text" formControlName="email" email required>
             <label>Email</label>
+            <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+                <div *ngIf="myForm.get('email').errors.required">Email is required</div>
+                <div *ngIf="myForm.get('email').errors.valid">Email is invalid</div>
+            </div>
         </div>
         <div class="user-box">
-            <input type="password" name="" required>
+            <input type="password" formControlName="password" required>
             <label>Password</label>
+            <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)">
+                <div *ngIf="myForm.get('password').errors.required">Password is required</div>
+                <div *ngIf="myForm.get('password').errors.minLength">Password need to be at least 3 characters</div>
+            </div>
         </div>
-        <div class="user-box">
+        <!-- <div class="user-box">
             <input type="password" name="confirmPassword" required>
             <label>Confirm_Password</label>
-        </div>
-        <a href="#">
+        </div> -->
+        <a >
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Register
+            <button type="submit" >Register</button>
         </a>
     </form>
 </div>

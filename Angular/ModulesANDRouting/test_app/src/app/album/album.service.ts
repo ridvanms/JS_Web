@@ -6,14 +6,12 @@ import { environment } from 'src/environment.prod';
 
 import { Album } from '../Types/Album';
 
-import{ActivatedRoute}  from "@angular/router"
-
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumService {
 
-  constructor(private http:HttpClient,private activeRoute:ActivatedRoute) { }
+  constructor(private http:HttpClient) { }
  
   apiUrl = environment.apiUrl
 

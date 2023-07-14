@@ -8,6 +8,16 @@ body {
   background: linear-gradient(#141e30, #243b55);
 }
 
+/* ! validation */
+
+form input.ng-invalid.ng-touched{
+  border-color:red
+}
+form button{
+  text-transform: uppercase;
+}
+/* ! validation */
+
 .register-box {
   position: absolute;
   top: 50%;

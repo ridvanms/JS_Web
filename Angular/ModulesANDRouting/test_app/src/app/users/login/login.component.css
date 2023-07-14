@@ -7,7 +7,21 @@ body {
   font-family: sans-serif;
   background: linear-gradient(#141e30, #243b55);
 }
+/* ! FOr validation */
 
+input.ng-invalid.ng-touched{
+  border-color:red;}
+
+form a:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+button{
+  text-transform: uppercase;
+}
+
+
+/* ! end of validation */
 .login-box {
   position: absolute;
   top: 50%;

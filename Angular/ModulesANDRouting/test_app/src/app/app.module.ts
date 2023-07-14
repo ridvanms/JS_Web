@@ -36,7 +36,7 @@ import { UsersModule } from './users/users.module';
     MatDividerModule,
     AlbumModule,
     CommentsModule,
-    UsersModule
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
