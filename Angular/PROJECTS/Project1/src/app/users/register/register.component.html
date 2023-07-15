@@ -18,10 +18,14 @@
                 <div *ngIf="myForm.get('password').errors.minLength">Password need to be at least 3 characters</div>
             </div>
         </div>
-        <!-- <div class="user-box">
-            <input type="password" name="confirmPassword" required>
+        <div class="user-box">
+            <input type="password" formControlName="confirmPassword" required>
             <label>Confirm_Password</label>
-        </div> -->
+            <div *ngIf="myForm.hasError('passwordMismatch') && myForm.controls.confirmPassword.touched">
+                Passwords mismatch
+            </div>
+                
+        </div>
         <a >
             <span></span>
             <span></span>
