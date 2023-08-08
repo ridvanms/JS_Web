@@ -1,0 +1,10 @@
+
+<input type="text" [value]="counter$ | async" style="width: 11em;height:4em;text-align:center;margin-bottom:1em" disabled="true">
+
+
+<div>
+  <button (click)="increment()" style="width: 6em;height:em;color:aqua">+</button>
+  <button (click)="decrement()" style="width: 6em;height:em;color:rgb(255, 8, 0)">-</button>
+</div>
+<hr>
+<button (click)="reset()">Reset</button>
